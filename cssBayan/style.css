@@ -33,7 +33,7 @@ body {
 }
 
 .memes__meme {
-  border-top: firebrick 1px dashed;
+  border-top: firebrick 0.05em dashed;
   padding: 0.5em 0;
 }
 
@@ -48,6 +48,7 @@ body {
 .meme__heading {
   font-size: 1em;
   font-weight: 600;
+  color: firebrick;
 }
 
 label {
@@ -59,7 +60,8 @@ label {
   background: url("/assets/img/plus.png") no-repeat center / contain;
   width: 1em;
   height: 1em;
-  padding-right: 0.5em
+  padding-right: 0.5em;
+  transition: all 0.5s ease-in;
 }
 
 .meme__image {
@@ -76,10 +78,11 @@ input {
 
 input:checked ~ label .meme__open {
   background: url("/assets/img/close.png") no-repeat center / contain;
+  transition: all 0.5s ease-in;
 }
 
-input:checked ~ label {
-  color: firebrick;
+input:checked ~ label .meme__heading {
+  color: black;
 }
 
 input:checked ~ label .meme__image {
@@ -119,4 +122,41 @@ input:checked ~ label .meme__image {
   .meme__heading {
     font-size: 2em;
   }
+
+  .meme__image {
+    max-width: 40%;
+  }
+}
+
+@media (hover: hover) {
+  label {
+    cursor: pointer;
+  }
+
+  .meme:hover .meme__image {
+    visibility: visible;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    padding: 1em 0;
+  }
+
+  .memes:hover label .meme__heading {
+    color: black;
+  }
+
+  .meme__open {
+    visibility: hidden;
+  }
+
+  .memes:hover .meme__open {
+    visibility: visible;
+  }
+}
+
+.memes__meme:active label .meme__heading {
+  color: firebrick;
+}
+
+.memes__meme:active label .meme__image {
+  opacity: 0.5;
 }
