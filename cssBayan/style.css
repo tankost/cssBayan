@@ -57,7 +57,7 @@ label {
 }
 
 .meme__open {
-  background: url("/assets/img/plus.png") no-repeat center / contain;
+  background: url("./assets/img/plus.png") no-repeat center / contain;
   width: 1em;
   height: 1em;
   padding-right: 0.5em;
@@ -77,7 +77,7 @@ input {
 }
 
 input:checked ~ label .meme__open {
-  background: url("/assets/img/close.png") no-repeat center / contain;
+  background: url("./assets/img/close.png") no-repeat center / contain;
   transition: all 0.5s ease-in;
 }
 
