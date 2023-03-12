@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  margin: 1rem 2rem;
+  width: 90%;
+}
+
+.bayan {
+  padding: 0 1rem;
+}
+
+.bayan__heading {
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.bayan__memes {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0;
+}
+
+.memes__meme {
+  border-top: firebrick 1px dashed;
+  padding: 0.5em 0;
+}
+
+.meme__info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.meme__heading {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+label {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.meme__open {
+  background: url("/assets/img/plus.png") no-repeat center / contain;
+  width: 1em;
+  height: 1em;
+  padding-right: 0.5em
+}
+
+.meme__image {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  visibility: hidden;
+  height: 0;
+}
+
+input {
+  display: none;
+}
+
+input:checked ~ label .meme__open {
+  background: url("/assets/img/close.png") no-repeat center / contain;
+}
+
+input:checked ~ label {
+  color: firebrick;
+}
+
+input:checked ~ label .meme__image {
+  visibility: visible;
+  height: 100%;
+  padding: 1em 0;
+  transition: all 0.5s ease-in-out;
+}
