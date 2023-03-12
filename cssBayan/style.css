@@ -88,3 +88,35 @@ input:checked ~ label .meme__image {
   padding: 1em 0;
   transition: all 0.5s ease-in-out;
 }
+
+@media (min-width: 768px) {
+  .memes__meme {
+    padding: 1.5em 0;
+  }
+
+  .bayan__heading {
+    font-size: 3em;
+  }
+
+  .meme__heading {
+    font-size: 1.5em;
+  }
+
+  .meme__image {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .memes__meme {
+    padding: 2em 0;
+  }
+
+  .bayan__heading {
+    font-size: 4em;
+  }
+
+  .meme__heading {
+    font-size: 2em;
+  }
+}
